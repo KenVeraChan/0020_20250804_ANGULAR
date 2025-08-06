@@ -11,5 +11,26 @@
 <br>
 <input type="text" #empresa (keyup)="0" [disabled]="habilitacionCuadro">
 <br>
-Registrado: <input type="checkbox" id="registro" [checked]="usuarioRegistrado">
-{{getUsuarioRegistrado()}}
+
+{{textoDeRegistro}};
+<br>
+Registrado: <input type="checkbox" id="registro" [checked]="usuarioRegistrado" (click)="setUsuarioRegistrado()">
+No registrado: <input type="checkbox" id="Noregistro" [checked]="usuarioNoRegistrado" (click)="setUsuarioNoRegistrado()">
+<br>
+<br>
+<p>ELEGIR LA NACIONALIDAD DEL USUARIO</p>
+<br>
+Elegir:<input type="checkbox" id="elegir" value="elegir" [checked]="elegir" (click)="setNacionalidadExtranjera($event)">
+<br>
+Española: <input type="checkbox" id="espanola" value="espanola" [checked]="nacionalidadEspanola" (click)="setNacionalidadExtranjera($event)">
+<br>
+Francesa: <input type="checkbox" id="francesa" value="francesa" [checked]="nacionalidadFrancesa" (click)="setNacionalidadExtranjera($event)">
+<br>
+Inglesa: <input type="checkbox" id="inglesa" value="inglesa" [checked]="nacionalidadInglesa" (click)="setNacionalidadExtranjera($event)">
+<br>
+Italiana: <input type="checkbox" id="italiana" value="italiana" [checked]="nacionalidadItaliana" (click)="setNacionalidadExtranjera($event)">
+<br>
+Portuguesa: <input type="checkbox" id="portuguesa" value="portuguesa" [checked]="nacionalidadPortuguesa" (click)="setNacionalidadExtranjera($event)">
+<br>
+{{textoDeNacionalidad}};
+<br>

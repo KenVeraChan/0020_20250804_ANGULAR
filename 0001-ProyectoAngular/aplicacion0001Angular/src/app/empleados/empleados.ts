@@ -11,6 +11,7 @@ export class Empleados {
      edad=21;
      empresa="Sfer4D Corporation";
      fechaNacimiento=new Date(2004, 7, 15);
+     contador=0;
 
     //Constructor sería asi
     constructor(){
@@ -58,9 +59,92 @@ export class Empleados {
     habilitacionCuadro=true; //Variable para habilitar o deshabilitar el cuadro de texto
     //Método para habilitar o deshabilitar el cuadro de texto
     usuarioRegistrado=false; //Variable para indicar si el usuario está registrado
-    getUsuarioRegistrado()
+    usuarioNoRegistrado=true; //Variable para indicar si el usuario está registrado
+
+    public getUsuarioRegistrado()
     {
         this.usuarioRegistrado=false;
     }
+    public getUsuarioNoRegistrado()
+    {
+        this.usuarioNoRegistrado=true; 
+    }
 
+    textoDeRegistro="No hay ningún usuario registrado"; //Variable para el texto de registro
+
+    public setUsuarioRegistrado()
+    {
+        alert("Usuario registrado correctamente");
+        this.textoDeRegistro="Usuario registrado!"; //Variable para el texto de registro
+        this.usuarioRegistrado=true; //Variable para indicar si el usuario está registrado
+        this.usuarioNoRegistrado=false; //Variable para indicar si el usuario está registrado
+    }
+    public setUsuarioNoRegistrado()
+    {
+        alert("Usuario no registrado");
+        this.textoDeRegistro="No hay ningún usuario registrado!"; //Variable para el texto de registro
+        this.usuarioRegistrado=false; //Variable para indicar si el usuario está registrado
+        this.usuarioNoRegistrado=true; //Variable para indicar si el usuario está registrado
+    }
+    textoDeNacionalidad="Sin nacionalidad elegida"; //Variable para el texto de nacionalidad
+    elegir=true; //Variable por defecto para elegir la nacionalidad
+    nacionalidadEspanola=false; //Variable para indicar si la nacionalidad es española
+    nacionalidadFrancesa=false; //Variable para indicar si la nacionalidad es francesa
+    nacionalidadInglesa=false; //Variable para indicar si la nacionalidad es inglesa
+    nacionalidadItaliana=false; //Variable para indicar si la nacionalidad es italiana
+    nacionalidadPortuguesa=false; //Variable para indicar si la nacionalidad es portuguesa
+    public setNacionalidadExtranjera(event: Event)
+    {
+        if((<HTMLInputElement>event.target).value=="espanola")
+        {
+            this.elegir=false; //Variable por defecto para elegir la nacionalidad
+            this.nacionalidadEspanola=true; //Variable para indicar si la nacionalidad es española
+            this.nacionalidadFrancesa=false; //Variable para indicar si la nacionalidad es francesa
+            this.nacionalidadInglesa=false; //Variable para indicar si la nacionalidad es inglesa
+            this.nacionalidadItaliana=false; //Variable para indicar si la nacionalidad es italiana
+            this.nacionalidadPortuguesa=false; //Variable para indicar si la nacionalidad es portuguesa 
+            this.textoDeNacionalidad="La nacionalidad del usuario es ESPAÑOLA"; //Variable para el texto de registro
+        }
+        if((<HTMLInputElement>event.target).value=="francesa")
+        {
+            this.elegir=false; //Variable por defecto para elegir la nacionalidad
+            this.nacionalidadEspanola=false; //Variable para indicar si la nacionalidad es española
+            this.nacionalidadFrancesa=true; //Variable para indicar si la nacionalidad es francesa
+            this.nacionalidadInglesa=false; //Variable para indicar si la nacionalidad es inglesa
+            this.nacionalidadItaliana=false; //Variable para indicar si la nacionalidad es italiana
+            this.nacionalidadPortuguesa=false; //Variable para indicar si la nacionalidad es portuguesa 
+            this.textoDeNacionalidad="La nacionalidad del usuario es FRANCESA"; //Variable para el texto de registro 
+        }
+        if((<HTMLInputElement>event.target).value=="inglesa")
+        {
+            this.elegir=false; //Variable por defecto para elegir la nacionalidad
+            this.nacionalidadEspanola=false; //Variable para indicar si la nacionalidad es española
+            this.nacionalidadFrancesa=false; //Variable para indicar si la nacionalidad es francesa
+            this.nacionalidadInglesa=true; //Variable para indicar si la nacionalidad es inglesa
+            this.nacionalidadItaliana=false; //Variable para indicar si la nacionalidad es italiana
+            this.nacionalidadPortuguesa=false; //Variable para indicar si la nacionalidad es portuguesa
+            this.textoDeNacionalidad="La nacionalidad del usuario es INGLESA"; //Variable para el texto de registro  
+        }
+        if((<HTMLInputElement>event.target).value=="italiana")
+        {
+            this.elegir=false; //Variable por defecto para elegir la nacionalidad
+            this.nacionalidadEspanola=false; //Variable para indicar si la nacionalidad es española
+            this.nacionalidadFrancesa=false; //Variable para indicar si la nacionalidad es francesa
+            this.nacionalidadInglesa=false; //Variable para indicar si la nacionalidad es inglesa
+            this.nacionalidadItaliana=true; //Variable para indicar si la nacionalidad es italiana
+            this.nacionalidadPortuguesa=false; //Variable para indicar si la nacionalidad es portuguesa
+            this.textoDeNacionalidad="La nacionalidad del usuario es ITALIANA"; //Variable para el texto de registro  
+        }
+        if((<HTMLInputElement>event.target).value=="portuguesa")
+        {
+            this.elegir=false; //Variable por defecto para elegir la nacionalidad
+            this.nacionalidadEspanola=false; //Variable para indicar si la nacionalidad es española
+            this.nacionalidadFrancesa=false; //Variable para indicar si la nacionalidad es francesa
+            this.nacionalidadInglesa=false; //Variable para indicar si la nacionalidad es inglesa
+            this.nacionalidadItaliana=false; //Variable para indicar si la nacionalidad es italiana
+            this.nacionalidadPortuguesa=true; //Variable para indicar si la nacionalidad es portuguesa 
+            this.textoDeNacionalidad="La nacionalidad del usuario es PORTUGUESA"; //Variable para el texto de registro 
+        }
+
+    }
 }
