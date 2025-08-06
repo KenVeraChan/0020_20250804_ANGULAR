@@ -2,5 +2,14 @@
 
 <h1 style="text-align: center">Empleados de la Empresa</h1>
 <p>LISTA DE EMPLEADOS</p>
-
-<app-operario></app-operario>
+<p>NOMBRE: {{getNombre()}}</p>
+<p>APELLIDOS: {{getApellidos()}}</p>
+<p>EDAD: {{getEdad()}}</p>
+<p>EMPRESA: {{empresa.value}}</p>
+<p>FECHA NACIMIENTO: {{getFechaNacimiento()}}</p>
+<p>Introduce la empresa:</p>
+<br>
+<input type="text" #empresa (keyup)="0" [disabled]="habilitacionCuadro">
+<br>
+Registrado: <input type="checkbox" id="registro" [checked]="usuarioRegistrado">
+{{getUsuarioRegistrado()}}
