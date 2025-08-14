@@ -5,12 +5,16 @@
 <p>NOMBRE: {{getNombre()}}</p>
 <p>APELLIDOS: {{getApellidos()}}</p>
 <p>EDAD: {{getEdad()}}</p>
-<p>EMPRESA: {{empresa.value}}</p>
+<p>EMPRESA: {{empresa}}</p>
 <p>FECHA NACIMIENTO: {{getFechaNacimiento()}}</p>
-<p>Introduce la empresa:</p>
-<br>
-<input type="text" #empresa (keyup)="0" [disabled]="habilitacionCuadro">
-<br>
+
+<!--
+ <p>Introduce la empresa:</p>
+ <br>
+ <input type="text" #empresa (keyup)="0" [disabled]="habilitacionCuadro">
+ <br>
+-->
+ Introduce la empresa: <input type="text" [(ngModel)]="empresa">
 
 {{textoDeRegistro}};
 <br>

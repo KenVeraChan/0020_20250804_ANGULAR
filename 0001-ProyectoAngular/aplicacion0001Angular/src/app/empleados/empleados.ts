@@ -9,10 +9,14 @@ export class Empleados {
      nombre="Rasselin";
      apellidos="Wissangel Rousher";
      edad=21;
-     empresa="Sfer4D Corporation";
+     empresa="Alien";
      fechaNacimiento=new Date(2004, 7, 15);
      contador=0;
-
+    
+     cambiaEmpresa(event: Event) 
+     {
+        this.empresa= (<HTMLInputElement>event.target).value; //Actualiza la empresa con el valor del input
+     }
     //Constructor sería asi
     constructor(){
         //Inicialización de variables o servicios si es necesario
@@ -56,7 +60,7 @@ export class Empleados {
     {
 
     }
-    habilitacionCuadro=true; //Variable para habilitar o deshabilitar el cuadro de texto
+    habilitacionCuadro=false; //Variable para habilitar o deshabilitar el cuadro de texto
     //Método para habilitar o deshabilitar el cuadro de texto
     usuarioRegistrado=false; //Variable para indicar si el usuario está registrado
     usuarioNoRegistrado=true; //Variable para indicar si el usuario está registrado
