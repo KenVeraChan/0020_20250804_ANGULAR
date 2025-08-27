@@ -1,0 +1,2 @@
+ojo a las actualizaciones de las directivas de Angular desde la versión 19, porque
+ahora serán @if, @for, @switch

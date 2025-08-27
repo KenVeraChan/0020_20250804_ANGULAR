@@ -1,11 +1,14 @@
 <h1>{{mostrarTitulo()}}</h1>
 
-<form>
-  Numero 1: <input type="text" [(ngModel)]="numeroPrimero" name="numeroPrimero">
-  <br>
-  Numero 2: <input type="text" [(ngModel)]="numeroSegundo" name="numeroSegundo">
-  <br>
-  <input type="submit" value="Sumar">
-</form>
 
-<p>Resultado: {{resultado}}</p>
+<div class="container">  <!-- metido en un contenedor bootstrap-->
+  <form>
+    Numero 1: <input type="number" [(ngModel)]="numeroPrimero" name="numeroPrimero">
+    <br>
+    Numero 2: <input type="number" [(ngModel)]="numeroSegundo" name="numeroSegundo">
+    <br>
+    <input type="submit" value="Sumar" (click)="sumar()">
+  </form>
+
+  <p>Resultado: {{resultado}}</p>
+</div>

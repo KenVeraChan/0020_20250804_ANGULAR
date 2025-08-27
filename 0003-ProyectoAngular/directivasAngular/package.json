@@ -1,5 +1,5 @@
 {
-  "name": "angular-calculadora",
+  "name": "directivas-angular",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:angularCalculadora": "node dist/angularCalculadora/server/server.mjs"
+    "serve:ssr:directivasAngular": "node dist/directivasAngular/server/server.mjs"
   },
   "prettier": {
     "overrides": [

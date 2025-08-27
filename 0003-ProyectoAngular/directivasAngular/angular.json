@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angularCalculadora": {
+    "directivasAngular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -75,10 +75,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angularCalculadora:build:production"
+              "buildTarget": "directivasAngular:build:production"
             },
             "development": {
-              "buildTarget": "angularCalculadora:build:development"
+              "buildTarget": "directivasAngular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -109,6 +109,6 @@
     }
   },
   "cli": {
-    "analytics": "d9b2973b-fc9b-48e0-8524-65b2ba04cf9b"
+    "analytics": "6dacd347-8ad7-4ba1-9e29-c4e498e81b63"
   }
 }

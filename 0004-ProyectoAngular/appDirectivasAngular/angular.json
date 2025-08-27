@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angularCalculadora": {
+    "appDirectivasAngular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -24,9 +24,6 @@
           "builder": "@angular/build:application",
           "options": {
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
               {
@@ -35,17 +32,8 @@
               }
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
-            ],
-            "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
-            ],
-            "server": "src/main.server.ts",
-            "outputMode": "server",
-            "ssr": {
-              "entry": "src/server.ts"
-            }
+              "src/styles.css"
+            ]
           },
           "configurations": {
             "production": {
@@ -75,10 +63,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angularCalculadora:build:production"
+              "buildTarget": "appDirectivasAngular:build:production"
             },
             "development": {
-              "buildTarget": "angularCalculadora:build:development"
+              "buildTarget": "appDirectivasAngular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -89,10 +77,6 @@
         "test": {
           "builder": "@angular/build:karma",
           "options": {
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
               {
@@ -101,7 +85,13 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+            ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "node_modules/@popperjs/core/dist/umd/popper.min.js"
             ]
           }
         }
@@ -109,6 +99,6 @@
     }
   },
   "cli": {
-    "analytics": "d9b2973b-fc9b-48e0-8524-65b2ba04cf9b"
+    "analytics": "808d0627-835a-4ed2-8b33-116008c6c37e"
   }
 }
