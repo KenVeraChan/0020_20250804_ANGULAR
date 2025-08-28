@@ -18,6 +18,10 @@
             <input type="text" name="salario" id="salario" placeholder="Salario" class="form-control" [(ngModel)]="cuadroSalario">
           </div>
         </form>
+        <br>
+        <div [ngStyle]="{color: cuadroCargo=='Jefe'? 'red':'black'}">{{cuadroTexto}}{{cuadroNombre}} {{cuadroApellido}} tiene de profesión: {{cuadroCargo}} y cobra {{cuadroSalario | currency:'EUR'}}</div>
+        <div [ngClass]="{paraJefes: cuadroCargo=='Jefe'}">{{cuadroCargo}}</div>
+        <br>
         <div class="col">
           <button type="submit" class="btn btn-primary" (click)="agregarEmpleado()">AGREGAR</button>
         </div>

@@ -13,6 +13,7 @@ export class App {
   cuadroApellido:string="";
   cuadroCargo:string="";
   cuadroSalario:number=0;
+  cuadroTexto="El usuario es: ";
 
   empleados:Empleado[]=
     [
