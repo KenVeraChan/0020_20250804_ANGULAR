@@ -15,6 +15,7 @@ export class App {
   cuadroPrecio: number = 0; 
   indiceMostrar: number=0;
   tituloEmpresa='Escritores Sin Fronteras - Un Viaje en Prosa';
+  valorEntidades: number=0;
 
     elementos: Elemento[] = [
     new Elemento("Manzanas", 5, 1.20),
@@ -34,5 +35,13 @@ export class App {
   public eliminarElemento()
   {
       this.elementos.pop();
+  }
+  agregarEntidad(nuevaEntidad:string)
+  {
+    this.valorEntidades=Number(nuevaEntidad);      //Recoge el dato que viene del COMPONENTE HIJO
+    if(this.valorEntidades>0 && this.valorEntidades<=this.elementos.length)
+    {    //Tiene que estar el valor numerico entre los dos extremos del array de ELEMENTOS mostrado
+      this.elementos.splice(this.valorEntidades-1,1);  //Ejecuta eliminación de la posición del array
+    }
   }
 }

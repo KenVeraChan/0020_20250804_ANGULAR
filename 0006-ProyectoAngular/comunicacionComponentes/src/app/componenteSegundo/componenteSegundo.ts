@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Elemento } from '../elementos.model';
 
 @Component({
@@ -16,5 +16,11 @@ export class ComponenteSegundo implements OnInit {
     // Aquí puedes realizar alguna acción al inicializar el componente
   }
 
-
+  //AREA DEL OUTPUT DE EVENTOS Y DATOS
+  @Output() entidadExtraida= new EventEmitter<string>();
+  
+  emiteCaracteristicas(value:string)
+  {
+    this.entidadExtraida.emit(value);
+  }
 }
