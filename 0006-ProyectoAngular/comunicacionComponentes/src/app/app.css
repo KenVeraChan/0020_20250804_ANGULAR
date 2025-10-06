@@ -1,17 +1,32 @@
-.text-danger{
-    color: red;
-    font-weight: bold;
-    text-decoration: underline;
-    background-color: #f8d7da;
-    padding: 5px;
-    border-radius: 3px;
-    margin-top: 5px;
-    display: inline-block;
-    font-size: 14px;
-    font-family: Arial, sans-serif;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border: 1px solid red;
-    width: 100%;
+.titulos
+{
     text-align: center;
-    box-sizing: border-box;
+    font-family: 'Arial Black', sans-serif;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+#formularioEntrada
+{
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    padding-left: 18%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.botonera
+{
+    text-align: center;
+    margin-top: 10px;
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+}
+#boton1
+{
+    margin-right: 10px;
+}
+#boton2
+{
+    margin-left: 10px;
 }

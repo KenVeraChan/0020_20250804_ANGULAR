@@ -9,12 +9,13 @@ import { Elemento } from './elementos.model';
 })
 export class App {
   // Variables para el formulario
-  tituloGeneral='Comuniación entre componentes'
+  tituloGeneral='Sección de compras'
   cuadroNombre: string = "";
   cuadroCantidad: number = 0;
   cuadroPrecio: number = 0; 
   indiceMostrar: number=0;
-  tituloLista='Lista de la compra'
+  tituloEmpresa='Escritores Sin Fronteras - Un Viaje en Prosa';
+
     elementos: Elemento[] = [
     new Elemento("Manzanas", 5, 1.20),
     new Elemento("Naranjas", 3, 0.80),
@@ -29,5 +30,9 @@ export class App {
       const nuevoElemento = new Elemento(this.cuadroNombre,this.cuadroCantidad,this.cuadroPrecio);
       this.elementos.push(nuevoElemento);
     }
+  }
+  public eliminarElemento()
+  {
+      this.elementos.pop();
   }
 }
