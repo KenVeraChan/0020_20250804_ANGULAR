@@ -14,7 +14,7 @@ export class App {
   cuadroCantidad: number = 0;
   cuadroPrecio: number = 0; 
   indiceMostrar: number=0;
-
+  tituloLista='Lista de la compra'
     elementos: Elemento[] = [
     new Elemento("Manzanas", 5, 1.20),
     new Elemento("Naranjas", 3, 0.80),

@@ -1,12 +1,24 @@
-<h1>{{tituloElementos}}</h1>
-
-@for(elemento of elementosMatriz;track elemento; let i = $index)
-{
-<tr>
-    <td>{{ i+1 }} - {{ elemento.nombre }}</td>
-    <td>{{ elemento.cantidad }}</td>
-    <td>{{ elemento.precio | currency:'EUR' }}</td>
-    <td [ngClass]="{'text-danger': elemento.total < 5}">{{ elemento.total| currency:'EUR' }}</td>
-</tr>
-}
+<div class="container">    <!--CONTENEDOR DE LISTA COMPRA-->
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Cantidad</th>
+          <th>Precio</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for(elemento of elementosMatriz;track elemento; let i = $index)
+          {
+            <tr>
+                <td>{{ i+1 }} - {{ elemento.nombre }}</td>
+                <td>{{ elemento.cantidad }}</td>
+                <td>{{ elemento.precio | currency:'EUR' }}</td>
+                <td [ngClass]="{'text-danger': elemento.total < 5}">{{ elemento.total| currency:'EUR' }}</td>
+            </tr>
+          }
+      </tbody>
+    </table>
+  </div>
 

@@ -9,14 +9,12 @@ import { Elemento } from '../elementos.model';
 })
 export class ComponenteSegundo implements OnInit {
 /*Uso de variables para transferencia de datos entre componentes*/
-  @Input() elementoNombre: string;
-  @Input() elementoCantidad: number
-  @Input() elementoPrecio: number;
   @Input() elementosMatriz: Elemento[];
+  @Input() tituloElementos = 'lista de la compra';
 
   ngOnInit(): void {
     // Aquí puedes realizar alguna acción al inicializar el componente
   }
 
-  tituloElementos = 'lista de la compra';
+
 }

@@ -19,19 +19,4 @@
         <button type="button" class="btn btn-primary" (click)="agregarElemento()">Agregar</button>
       </div>
 </div>
-
-  <div class="container">    <!--CONTENEDOR DE FRUTAS Y VERDURAS-->
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th>Nombre</th>
-          <th>Cantidad</th>
-          <th>Precio</th>
-          <th>Total</th>
-        </tr>
-      </thead>
-      <tbody>
-        <app-componenteSegundo [elementoNombre]="cuadroNombre" [elementoCantidad]="cuadroCantidad" [elementoPrecio]="cuadroPrecio" [elementoCantidad]="cuadroCantidad" [elementoPrecio]="cuadroPrecio" [elementosMatriz]="elementos"></app-componenteSegundo>
-      </tbody>
-    </table>
-  </div>
+<app-componenteSegundo [elementosMatriz]="elementos" [tituloElementos]="tituloLista"></app-componenteSegundo>
