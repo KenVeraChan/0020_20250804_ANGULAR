@@ -1,0 +1,27 @@
+<!--CONTENEDOR DE INPUTS-->
+  <button (click)="emiteCaracteristicas(inputCaracteristica.value)" type="button" class="btn btn-primary" id="boton3">Eliminar el elegido</button>
+  <input type="number" id="inputCaracteristica" #inputCaracteristica>
+<div class="container">    <!--CONTENEDOR DE LISTA COMPRA-->
+    <table class="tableItems">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Cantidad</th>
+          <th>Precio</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for(elemento of elementosMatriz;track elemento; let i = $index)
+          {
+            <tr>
+                <td>{{ i+1 }} - {{ elemento.nombre }}</td>
+                <td>{{ elemento.cantidad }}</td>
+                <td>{{ elemento.precio | currency:'EUR' }}</td>
+                <td [ngClass]="{'text-danger': elemento.total < 5}">{{ elemento.total| currency:'EUR' }}</td>
+            </tr>
+          }
+      </tbody>
+    </table>
+</div>
+

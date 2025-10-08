@@ -1,0 +1,32 @@
+.titulos
+{
+    text-align: center;
+    font-family: 'Arial Black', sans-serif;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+#formularioEntrada
+{
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    padding-left: 18%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.botonera
+{
+    text-align: center;
+    margin-top: 10px;
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+}
+#boton1
+{
+    margin-right: 10px;
+}
+#boton2
+{
+    margin-left: 10px;
+}

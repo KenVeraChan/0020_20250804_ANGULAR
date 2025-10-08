@@ -1,0 +1,26 @@
+.cintaOpciones
+{
+    width: 100%;
+}
+.accesos
+{
+    width: 100%;
+border-radius: 12px;
+}
+.botones
+{
+    float: left;
+    width:16.66%;
+    height: 50px;
+    border:none;
+    text-align: center;
+    font:rgb(1, 17, 158) bold;
+    margin-bottom: 15px;
+}
+.botones:hover
+{
+background-color: #4CAF50;
+color: white;
+transform: scale(1,1);
+transition: all 0.3s ease;
+}
