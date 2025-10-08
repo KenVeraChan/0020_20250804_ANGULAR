@@ -21,6 +21,6 @@ export class ComponenteSegundo implements OnInit {
   
   emiteCaracteristicas(value:string)
   {
-    this.entidadExtraida.emit(value);
+    this.entidadExtraida.emit(value);    //Se lanza el valor de entidadExtraida lanzando el evento
   }
 }
