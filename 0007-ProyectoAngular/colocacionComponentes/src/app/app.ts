@@ -1,5 +1,6 @@
-import { Component, signal } from '@angular/core';
+import { Component } from '@angular/core';
 import { Elemento } from './elementos.model';
+import { ServicioEscritores } from './servicio-escritores';
 
 @Component({
   selector: 'app-root',
@@ -24,19 +25,24 @@ export class App {
     new Elemento("Piñas", 21, 1.45),
     new Elemento("Aguacates", 6, 0.20),
   ];
-  public agregarElemento()
+  
+  //Area de servicios creados
+  constructor(private miServicio: ServicioEscritores) {}
+
+  public agregarElemento(): void
   {
     if(this.cuadroCantidad > 0 && this.cuadroPrecio > 0) 
     {
       const nuevoElemento = new Elemento(this.cuadroNombre,this.cuadroCantidad,this.cuadroPrecio);
+      this.miServicio.muestraMensaje("Elemento añadido: "+this.cuadroNombre);
       this.elementos.push(nuevoElemento);
     }
   }
-  public eliminarElemento()
+  public eliminarElemento(): void
   {
       this.elementos.pop();
   }
-  agregarEntidad(nuevaEntidad:string)
+  public eliminarEntidad(nuevaEntidad:string): void
   {
     this.valorEntidades=Number(nuevaEntidad);      //Recoge el dato que viene del COMPONENTE HIJO
     if(this.valorEntidades>0 && this.valorEntidades<=this.elementos.length)

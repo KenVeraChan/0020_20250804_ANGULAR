@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { ComponenteSegundo } from './componenteSegundo/componenteSegundo';
 import { ComponenteTercero } from './componenteTercero/componenteTercero';
+import { ServicioEscritores } from './servicio-escritores';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ComponenteTercero } from './componenteTercero/componenteTercero';
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideClientHydration(withEventReplay())
+    provideClientHydration(withEventReplay()),
+    ServicioEscritores
   ],
   bootstrap: [App]
 })

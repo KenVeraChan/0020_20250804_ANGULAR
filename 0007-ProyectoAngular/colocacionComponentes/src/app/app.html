@@ -23,7 +23,7 @@
       <div class="botonera">
         <button type="button" class="btn btn-primary" id="boton1" (click)="agregarElemento()">Agregar</button>
         <button type="button" class="btn btn-primary" id="boton2" (click)="eliminarElemento()">Eliminar el último</button>
-        <app-componenteSegundo [elementosMatriz]="elementos" (entidadExtraida)="agregarEntidad($event)"></app-componenteSegundo>
+        <app-componenteSegundo [elementosMatriz]="elementos" (entidadExtraida)="eliminarEntidad($event)"></app-componenteSegundo>
       </div>
 </div>
 
