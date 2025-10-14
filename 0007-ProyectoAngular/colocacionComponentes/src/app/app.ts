@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Elemento } from './elementos.model';
-import { ServicioEscritores } from './servicio-escritores';
+import { ServiciosLibros } from './serviciosAppLibros/serviciosLibros';
 
 @Component({
   selector: 'app-root',
@@ -27,14 +27,14 @@ export class App {
   ];
   
   //Area de servicios creados
-  constructor(private miServicio: ServicioEscritores) {}
+  constructor(private ServiciosLibros: ServiciosLibros) {}
 
   public agregarElemento(): void
   {
     if(this.cuadroCantidad > 0 && this.cuadroPrecio > 0) 
     {
+      alert(this.ServiciosLibros.mostrarInfo()+"El precio con descuento del 15%: $"+this.ServiciosLibros.aplicarDescuento(15).toFixed(2));
       const nuevoElemento = new Elemento(this.cuadroNombre,this.cuadroCantidad,this.cuadroPrecio);
-      this.miServicio.muestraMensaje("Elemento añadido: "+this.cuadroNombre);
       this.elementos.push(nuevoElemento);
     }
   }
