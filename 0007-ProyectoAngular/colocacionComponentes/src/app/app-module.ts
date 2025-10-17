@@ -5,13 +5,14 @@ import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
 import { ComponenteSegundo } from './componenteSegundo/componenteSegundo';
 import { ComponenteTercero } from './componenteTercero/componenteTercero';
-import { ServiciosLibros } from './serviciosAppLibros/serviciosLibros';
+import { ComponentePrimero } from './componentePrimero/componentePrimero';
 
 @NgModule({
   declarations: [
     App,
     ComponenteSegundo,
-    ComponenteTercero
+    ComponenteTercero,
+    ComponentePrimero
   ],
   imports: [
     BrowserModule,
@@ -20,8 +21,7 @@ import { ServiciosLibros } from './serviciosAppLibros/serviciosLibros';
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideClientHydration(withEventReplay()),
-    ServiciosLibros
+    provideClientHydration(withEventReplay())
   ],
   bootstrap: [App]
 })

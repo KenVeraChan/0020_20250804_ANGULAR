@@ -1,14 +1,16 @@
+<div>
 <table class="cintaOpciones">
-  <tbody>
+    <tbody>
     <tr>
         <td class="accesos">
-            <button class="botones">INICIO</button>
-            <button class="botones">NOVEDADES</button>
-            <button class="botones">CALENDARIO ACTIVIDADES</button>
-            <button class="botones">BLOG</button>
-            <button class="botones">SOBRE NOSOTROS</button>
-            <button class="botones">SERVICIOS</button>
+            <button class="botones" (click)="cargaComponente(0)">INICIO</button>
+            <button class="botones" (click)="cargaComponente(1)">NOVEDADES</button>
+            <button class="botones" (click)="cargaComponente(2)">CALENDARIO ACTIVIDADES</button>
+            <button class="botones" (click)="cargaComponente(3)">BLOG</button>
+            <button class="botones" (click)="cargaComponente(4)">SOBRE NOSOTROS</button>
+            <button class="botones" (click)="cargaComponente(5)">SERVICIOS</button>
         </td> 
     </tr>
-   </tbody>
+    </tbody>
 </table>
+</div>

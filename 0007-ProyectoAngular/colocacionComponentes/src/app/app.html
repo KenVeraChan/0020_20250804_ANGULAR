@@ -2,30 +2,22 @@
 <div class="titulos"><h3>{{tituloEmpresa}}</h3></div>
 <div class="titulos"><h3>{{tituloGeneral}}</h3></div>
 <br>
-<div>
-      <app-componenteTercero></app-componenteTercero>
-</div>
-<div class="formulario">
-     <form class="form-group row" id="formularioEntrada">
-          <div class="form-group col-md-3">
-                <label for="nombre">Nombre</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre del elemento" [(ngModel)]="cuadroNombre">
-          </div>
-          <div class="form-group col-md-3">
-                <label for="cantidad">Cantidad</label>
-                <input type="number" class="form-control" id="cantidad" name="cantidad" placeholder="Cantidad" [(ngModel)]="cuadroCantidad">
-          </div>
-          <div class="form-group col-md-3">
-                <label for="precio">Precio</label>
-                <input type="number" class="form-control" id="precio" name="precio" placeholder="Precio" [(ngModel)]="cuadroPrecio">
-          </div>
-     </form>
-      <div class="botonera">
-        <button type="button" class="btn btn-primary" id="boton1" (click)="agregarElemento()">Agregar</button>
-        <button type="button" class="btn btn-primary" id="boton2" (click)="eliminarElemento()">Eliminar el último</button>
-        <app-componenteSegundo [elementosMatriz]="elementos" (entidadExtraida)="eliminarEntidad($event)"></app-componenteSegundo>
-      </div>
-</div>
+  <app-componenteTercero (semaforo)="panelCargando($event)"></app-componenteTercero>
+  @switch (valorCarga) {
+    @case (0) 
+    {
+          <p>Seleccione una sección para cargar su contenido.</p>
+    }
+    @case (5) 
+    {
+          <app-componentePrimero></app-componentePrimero>
+    }
+    @default 
+    {
+         <p>No existe esa opción de contenido.</p> 
+    }
+  }
+
 
 
 
