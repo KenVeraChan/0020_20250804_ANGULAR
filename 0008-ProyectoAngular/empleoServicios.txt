@@ -1,0 +1,2 @@
+Método de Singleton para servicios con objetos y variables compartidos entre cualquiercomponente.
+Como un repositorio de variables y métodos.
