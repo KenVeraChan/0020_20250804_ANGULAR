@@ -14,6 +14,7 @@ export class ComponentePrimero {
   cuadroPrecio: number = 0; 
   indiceMostrar: number=0;
   valorEntidades: number=0;
+  valorCambiante: number=0;
 
     elementos: Elemento[] = [
     new Elemento("Manzanas", 5, 1.20),
@@ -34,12 +35,50 @@ export class ComponentePrimero {
   {
       this.elementos.pop();
   }
-  agregarEntidad(nuevaEntidad:string)
+  public agregarEntidad(nuevaEntidad:string)
   {
     this.valorEntidades=Number(nuevaEntidad);      //Recoge el dato que viene del COMPONENTE HIJO
     if(this.valorEntidades>0 && this.valorEntidades<=this.elementos.length)
     {    //Tiene que estar el valor numerico entre los dos extremos del array de ELEMENTOS mostrado
       this.elementos.splice(this.valorEntidades-1,1);  //Ejecuta eliminación de la posición del array
+    }
+  }
+  public cambiarElegido():void
+  {
+    if(this.valorCambiante>0 && this.valorCambiante<=this.elementos.length)
+    {
+      if((this.cuadroNombre =="" && this.cuadroPrecio > 0) || (this.cuadroNombre =="" && this.cuadroCantidad > 0))
+      {
+        alert("No se puede ejecutar el cambio con el concepto vacío");
+      }
+      if(this.cuadroNombre !="" && this.cuadroCantidad > 0 && this.cuadroPrecio > 0)
+      {
+      //Realiza el cambio de las características del elemento seleccionado
+      this.elementos[this.valorCambiante-1].setNombre(this.cuadroNombre);
+      this.elementos[this.valorCambiante-1].setCantidad(this.cuadroCantidad);
+      this.elementos[this.valorCambiante-1].setPrecio(this.cuadroPrecio);
+      }
+      if(this.cuadroNombre !="" && this.cuadroCantidad <= 0 && this.cuadroPrecio > 0)
+      {
+      //Realiza el cambio de todo menos de la cantidad
+      this.elementos[this.valorCambiante-1].setNombre(this.cuadroNombre);
+      this.elementos[this.valorCambiante-1].setPrecio(this.cuadroPrecio);
+      }
+      if(this.cuadroNombre !="" && this.cuadroCantidad > 0 && this.cuadroPrecio <= 0)
+      {
+      //Realiza el cambio de todo menos del precio
+      this.elementos[this.valorCambiante-1].setNombre(this.cuadroNombre);
+      this.elementos[this.valorCambiante-1].setCantidad(this.cuadroCantidad);
+      }
+      if(this.cuadroNombre !="" && this.cuadroCantidad <= 0 && this.cuadroPrecio <= 0)
+      {
+      //Realiza el cambio solo del nombre
+      this.elementos[this.valorCambiante-1].setNombre(this.cuadroNombre);
+      }
+    }
+    else
+    {
+      alert("El valor seleccionado para cambiar no es correcto. Fuera del intervalo establecido");
     }
   }
 }

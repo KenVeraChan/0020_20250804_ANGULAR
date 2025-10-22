@@ -21,20 +21,11 @@ export class ComponenteSegundo implements OnInit {
   }
   //SELECTOR DE OPERACIONES
   punteroOperacion: number=0; //0-Ninguna, 1-Eliminar, 2-Cambiar
+  valorOperacion: string=''; //Valor de la operación a realizar
   //AREA DEL OUTPUT DE EVENTOS Y DATOS
-    @Output() entidadExtraida= new EventEmitter<string>();
-    
-    emiteCaracteristicas(value:string, punteroOperacion:number)
-    {
-      if(punteroOperacion==1)   //Elimina el producto del Elemento elegido
-      {
-      this.entidadExtraida.emit(value);    //Se lanza el valor de entidadExtraida lanzando el evento
-      }
-      if(punteroOperacion==2)    //Cambia el producto del Elemento elegido
-      {
-        this.stockVariante.setElementoNombre(this.elementosMatriz[parseInt(value)].nombre,parseInt(value));
-        this.stockVariante.setElementoCantidad(this.elementosMatriz[parseInt(value)].cantidad,parseInt(value));
-        this.stockVariante.setElementoPrecio(this.elementosMatriz[parseFloat(value)].precio,parseInt(value));
-      }
-    }
+  @Output() entidadExtraida= new EventEmitter<string>();
+  public emiteCaracteristicas(valorOperacion:string)
+  {
+    this.entidadExtraida.emit(valorOperacion);    //Se lanza el valor de entidadExtraida lanzando el evento
+  }
 }

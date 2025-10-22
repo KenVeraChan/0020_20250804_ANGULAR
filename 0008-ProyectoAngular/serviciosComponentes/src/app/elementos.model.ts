@@ -10,6 +10,19 @@ export class Elemento{
         this.precio = precio;
         this.total= this.cantidad*this.precio;
     }
+    public setNombre(nombre: string){
+        this.nombre=nombre;
+        this.total= this.cantidad*this.precio;
+    }
+    public setCantidad(cantidad: number){
+        this.cantidad=cantidad;
+        this.total= this.cantidad*this.precio;
+    }
+    public setPrecio(precio: number){
+        this.precio=precio;
+        //Por consecuencia se cambia el precio final tras cambiar el precio o el numero de unidades
+        this.total= this.cantidad*this.precio;
+    }
 }
 export class Personas{
     nombre: string="";

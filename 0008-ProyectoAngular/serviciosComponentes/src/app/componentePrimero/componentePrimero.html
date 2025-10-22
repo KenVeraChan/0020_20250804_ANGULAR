@@ -2,7 +2,12 @@
      <form class="form-group row" id="formularioEntrada">
           <div class="form-group col-md-3">
                 <label for="nombre">Nombre</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre del elemento" [(ngModel)]="cuadroNombre">
+                <select class="form-control" id="nombre" name="nombre" [(ngModel)]="cuadroNombre">
+                  @for (puntero of elementos; track $index) 
+                  {
+                  <option>{{puntero.nombre}}</option>
+                  }
+                </select>
           </div>
           <div class="form-group col-md-3">
                 <label for="cantidad">Cantidad</label>
@@ -16,6 +21,8 @@
       <div class="botonera">
         <button type="button" class="btn btn-primary" id="boton1" (click)="agregarElemento()">Agregar</button>
         <button type="button" class="btn btn-primary" id="boton2" (click)="eliminarElemento()">Eliminar el último</button>
+        <button type="button" class="btn btn-primary" id="boton3" (click)="cambiarElegido()">Cambiar el elegido</button>
+          <input type="number" class="form-control" id="valorCambiante" name="valorCambiante" placeholder="Valor Cambiante" [(ngModel)]="valorCambiante">
         <app-componenteSegundo [elementosMatriz]="elementos" (entidadExtraida)="agregarEntidad($event)"></app-componenteSegundo>
       </div>
 </div>

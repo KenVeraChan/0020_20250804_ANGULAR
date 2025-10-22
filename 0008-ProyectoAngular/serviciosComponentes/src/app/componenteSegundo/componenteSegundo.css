@@ -56,14 +56,15 @@
 }
 #boton3
 {
-    margin-left: 20px;
-    margin-right: 15px;
+    float:left;
+    margin-left: 100px;
+    margin-right: 20px;
 }
 #inputCaracteristica
 {
     padding-top:0px;
     padding-bottom:0px;
-    margin-left: 15px;
+    margin-left: 10px;
     width: 80px;
     height: 37px;
     border-radius: 5px;
