@@ -1,12 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Elemento } from '../elementos.model';
+import { Avisador } from './avisador';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StockVariante {
 
-    constructor() 
+    constructor(public Avisador: Avisador) 
     {
       
     }
@@ -52,23 +53,27 @@ export class StockVariante {
         this.elementos[valorCambiante-1].setNombre(cuadroNombre);
         this.elementos[valorCambiante-1].setCantidad(cuadroCantidad);
         this.elementos[valorCambiante-1].setPrecio(cuadroPrecio);
+            this.Avisador.avisarCambio(cuadroNombre,cuadroCantidad,cuadroPrecio);
         }
         if(cuadroNombre !="" && cuadroCantidad <= 0 && cuadroPrecio > 0)
         {
         //Realiza el cambio de todo menos de la cantidad
         this.elementos[valorCambiante-1].setNombre(cuadroNombre);
         this.elementos[valorCambiante-1].setPrecio(cuadroPrecio);
+            this.Avisador.avisarCambio(cuadroNombre,cuadroCantidad,cuadroPrecio);
         }
         if(cuadroNombre !="" && cuadroCantidad > 0 && cuadroPrecio <= 0)
         {
         //Realiza el cambio de todo menos del precio
         this.elementos[valorCambiante-1].setNombre(cuadroNombre);
         this.elementos[valorCambiante-1].setCantidad(cuadroCantidad);
+            this.Avisador.avisarCambio(cuadroNombre,cuadroCantidad,cuadroPrecio);
         }
         if(cuadroNombre !="" && cuadroCantidad <= 0 && cuadroPrecio <= 0)
         {
         //Realiza el cambio solo del nombre
         this.elementos[valorCambiante-1].setNombre(cuadroNombre);
+            this.Avisador.avisarCambio(cuadroNombre,cuadroCantidad,cuadroPrecio);
         }
       }
       else

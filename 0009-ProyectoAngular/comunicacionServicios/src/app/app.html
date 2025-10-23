@@ -1,0 +1,24 @@
+<br>
+<div class="titulos"><h3>{{tituloEmpresa}}</h3></div>
+<div class="titulos"><h3>{{tituloGeneral}}</h3></div>
+<br>
+  <app-componenteTercero (semaforo)="panelCargando($event)"></app-componenteTercero>
+  @switch (valorCarga) {
+    @case (0) 
+    {
+          <p>Seleccione una sección para cargar su contenido.</p>
+    }
+    @case (5) 
+    {
+          <app-componentePrimero></app-componentePrimero>
+    }
+    @default 
+    {
+         <p>No existe esa opción de contenido.</p> 
+    }
+  }
+
+
+
+
+

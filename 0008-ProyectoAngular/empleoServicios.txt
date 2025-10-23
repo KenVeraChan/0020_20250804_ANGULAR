@@ -1,2 +1,3 @@
-Método de Singleton para servicios con objetos y variables compartidos entre cualquiercomponente.
+1) Método de Singleton para servicios con objetos y variables compartidos entre cualquiercomponente.
 Como un repositorio de variables y métodos.
+2) Creación de un DATASERVICE
