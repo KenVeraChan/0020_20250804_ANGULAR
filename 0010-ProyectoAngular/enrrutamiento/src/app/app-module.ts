@@ -3,18 +3,54 @@ import { BrowserModule, provideClientHydration, withEventReplay } from '@angular
 
 import { AppRoutingModule } from './app-routing-module';
 import { App } from './app';
+import { Home } from './home/home';
+import { Historia } from './historia/historia';
+import { Productos } from './productos/productos';
+import { Servicios } from './servicios/servicios';
+import { Proyectos } from './proyectos/proyectos';
+import { Cliente } from './cliente/cliente';
+import { JefesYrrhh } from './jefesYrrhh/jefesYrrhh';
+import { RouterModule, Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';    //Para la carga del decorado bootstrap
+import { ComponenteSegundo } from './productos/componenteSegundo/componenteSegundo';
+import { ComponenteTercero } from './productos/componenteTercero/componenteTercero';
+import { ComponentePrimero } from './productos/componentePrimero/componentePrimero';
+import { StockVariante } from './productos/services/stockVariante';
+
+const appRoutes: Routes = [
+  { path: '', component: Home },
+  { path: 'historia', component: Historia },
+  { path: 'productos', component: Productos },
+  { path: 'servicios', component: Servicios },
+  { path: 'proyectos', component: Proyectos },
+  { path: 'cliente', component: Cliente },
+  { path: 'jefesYrrhh', component: JefesYrrhh }
+];
 
 @NgModule({
   declarations: [
-    App
+    App,
+    Home,
+    Historia,
+    Productos,
+    Servicios,
+    Proyectos,
+    Cliente,
+    JefesYrrhh,
+    ComponenteSegundo,
+    ComponenteTercero,
+    ComponentePrimero
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
-    provideClientHydration(withEventReplay())
+    provideClientHydration(withEventReplay()),
+    StockVariante
   ],
   bootstrap: [App]
 })

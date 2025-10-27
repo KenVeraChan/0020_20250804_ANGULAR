@@ -1,0 +1,45 @@
+#formularioEntrada
+{
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    padding-left: 18%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.botonera
+{
+    text-align: center;
+    margin-top: 10px;
+    background-color: #ecf0f1;
+    padding: 15px;
+    border-radius: 8px;
+}
+#boton1
+{
+    float:left;
+    margin-left: 60px;
+    margin-right: 10px;
+}
+#boton2
+{
+    float:left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#boton3
+{
+    float:left;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#valorCambiante
+{
+    float:left;
+    padding-top:0px;
+    padding-bottom:0px;
+    margin-left: 10px;
+    width: 80px;
+    height: 37px;
+    border-radius: 5px;
+}
