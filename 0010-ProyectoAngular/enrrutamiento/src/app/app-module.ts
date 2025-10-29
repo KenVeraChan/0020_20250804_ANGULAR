@@ -17,6 +17,8 @@ import { ComponenteTercero } from './productos/componenteTercero/componenteTerce
 import { ComponentePrimero } from './productos/componentePrimero/componentePrimero';
 import { StockVariante } from './productos/services/stockVariante';
 
+
+//Se han declarado las importaciones encima de esta frase 29 de octubre 2025 a las 11:00 horas
 const appRoutes: Routes = [
   { path: '', component: Home },
   { path: 'historia', component: Historia },
