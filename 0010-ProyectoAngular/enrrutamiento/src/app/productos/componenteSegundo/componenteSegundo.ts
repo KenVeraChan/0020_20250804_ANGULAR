@@ -13,7 +13,7 @@ export class ComponenteSegundo implements OnInit {
   constructor(public stockVariante: StockVariante) {}
 
 /*Uso de variables para transferencia de datos entre componentes*/
-  @Input() elementosMatriz: Elemento[];
+  @Input() elementosMatriz: Elemento[]=[];
   @Input() tituloElementos = 'lista de la compra';
 
   ngOnInit(): void {
