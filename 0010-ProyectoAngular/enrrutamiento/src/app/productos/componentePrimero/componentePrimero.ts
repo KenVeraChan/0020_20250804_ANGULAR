@@ -26,7 +26,7 @@ export class ComponentePrimero implements OnInit{
   }
   ngOnInit(): void 
   {
-        this.elementos=this.datosServicio.elementos;
+    this.elementos=this.datosServicio.elementos;
   }
   public agregarElemento()
   {

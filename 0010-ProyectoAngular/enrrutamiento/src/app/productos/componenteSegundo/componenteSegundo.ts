@@ -16,8 +16,10 @@ export class ComponenteSegundo implements OnInit {
   @Input() elementosMatriz: Elemento[]=[];
   @Input() tituloElementos = 'lista de la compra';
 
-  ngOnInit(): void {
+  ngOnInit(): void 
+  {
     // Aquí puedes realizar alguna acción al inicializar el componente
+      this.elementosMatriz=this.stockVariante.elementos;
   }
   //SELECTOR DE OPERACIONES
   punteroOperacion: number=0; //0-Ninguna, 1-Eliminar, 2-Cambiar
