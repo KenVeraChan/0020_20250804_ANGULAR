@@ -2,7 +2,12 @@
     <form class="form-group row" id="formularioEntrada">
         <div class="form-group col-md-3">
             <label for="nombre">Nombre</label>
-            <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" [(ngModel)]="cuadroNombre">
+            <select class="form-control" id="nombre" name="nombre" placeholder="Nombre" [(ngModel)]="cuadroNombre">
+                @for(unidades of proyectosMatriz; track unidades; let i = $index)
+                    {
+                        <option>{{ i+1 }} - {{unidades.nombre}}</option>
+                    }
+            </select>    
         </div>
         <div class="form-group col-md-3">
             <label for="cantidad">Cantidad</label>

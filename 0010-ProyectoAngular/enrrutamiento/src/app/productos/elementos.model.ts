@@ -52,3 +52,48 @@ export class Libros{
         this.isbn = isbn;
     }
 }
+export class proyectosEmpresariales
+{
+    nombre: string="";
+    descripcion: string="";
+    fechaInicio: Date=new Date();
+    fechaFin: Date=new Date();
+    presupuesto: number=0.0;
+
+    constructor(nombre: string, descripcion: string, fechaInicio: Date, fechaFin: Date, presupuesto: number){
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.fechaInicio = fechaInicio;
+        this.fechaFin = fechaFin;
+        this.presupuesto = presupuesto;
+    }
+}
+export class productosEmpresariales
+{
+    nombre: string="";
+    descripcion: string="";
+    precio: number=0.0;
+    stock: number=0;    
+
+    constructor(nombre: string, descripcion: string, precio: number, stock: number)
+    {   
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.precio = precio;
+        this.stock = stock;        
+    }   
+}
+export class serviciosEmpresariales
+{
+    nombre: string="";
+    descripcion: string="";
+    duracionHoras: number=0;
+    precio: number=0.0;
+    constructor(nombre: string, descripcion: string, duracionHoras: number, precio: number)
+    {
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.duracionHoras = duracionHoras;
+        this.precio = precio;
+    }
+}
