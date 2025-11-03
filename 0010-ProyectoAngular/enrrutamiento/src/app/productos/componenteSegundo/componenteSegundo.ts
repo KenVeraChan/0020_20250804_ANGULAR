@@ -30,4 +30,21 @@ export class ComponenteSegundo implements OnInit {
   {
     this.entidadExtraida.emit(valorOperacion);    //Se lanza el valor de entidadExtraida lanzando el evento
   }
+
+  //Datos que se enviarán al componente actualizador para posibles cambios
+  @Output() entidadNombre= new EventEmitter<string>();
+  @Output() entidadCantidad= new EventEmitter<number>();
+  @Output() entidadPrecio= new EventEmitter<number>();
+  @Output() entidadTotal= new EventEmitter<number>();
+  receptorPuntero: number=0;
+
+  public cargaActualizacion(receptorPuntero: number)
+  {
+    //Envio de datos elegidos al componente actualizador
+    this.entidadNombre.emit(this.elementosMatriz[receptorPuntero].nombre);
+    this.entidadCantidad.emit(this.elementosMatriz[receptorPuntero].cantidad);
+    this.entidadPrecio.emit(this.elementosMatriz[receptorPuntero].precio);
+    this.entidadTotal.emit(this.elementosMatriz[receptorPuntero].total);
+    this.receptorPuntero=receptorPuntero;
+  }
 }

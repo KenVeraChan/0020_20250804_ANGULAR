@@ -16,6 +16,7 @@ import { ComponenteSegundo } from './productos/componenteSegundo/componenteSegun
 import { ComponenteTercero } from './productos/componenteTercero/componenteTercero';
 import { ComponentePrimero } from './productos/componentePrimero/componentePrimero';
 import { StockVariante } from './productos/services/stockVariante';
+import { Actualizador } from './productos/actualizador/actualizador';
 
 
 //Se han declarado las importaciones encima de esta frase 29 de octubre 2025 a las 11:00 horas
@@ -26,7 +27,8 @@ const appRoutes: Routes = [
   { path: 'servicios', component: Servicios },
   { path: 'proyectos', component: Proyectos },
   { path: 'cliente', component: Cliente },
-  { path: 'jefesYrrhh', component: JefesYrrhh }
+  { path: 'jefesYrrhh', component: JefesYrrhh },
+  { path: 'actualizador', component: Actualizador }
 ];
 
 @NgModule({
@@ -41,7 +43,8 @@ const appRoutes: Routes = [
     JefesYrrhh,
     ComponenteSegundo,
     ComponenteTercero,
-    ComponentePrimero
+    ComponentePrimero,
+    Actualizador
   ],
   imports: [
     BrowserModule,

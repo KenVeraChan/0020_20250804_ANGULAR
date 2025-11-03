@@ -14,7 +14,7 @@
       <tbody>
         @for(elemento of elementosMatriz;track elemento; let i = $index)
           {
-            <tr>
+            <tr class="filasTabla" (click)="cargaActualizacion(i+1)">
                 <td>{{ i+1 }} - {{ elemento.nombre }}</td>
                 <td>{{ elemento.cantidad }}</td>
                 <td>{{ elemento.precio | currency:'EUR' }}</td>
@@ -23,5 +23,6 @@
           }
       </tbody>
     </table>
+    <app-actualizador (entidadExtraida)></app-actualizador>
 </div>
 
