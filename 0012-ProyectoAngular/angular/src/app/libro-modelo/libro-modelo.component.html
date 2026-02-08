@@ -1,0 +1,26 @@
+<h1>Libro Modelo</h1>
+<div #libroAbierto id="libroAbierto">
+  <div id="portada">
+    @for (pagina of paginas; track $index) {
+      <div
+        class="pagina"
+        [class.rotado]="pagina.rotado"
+        [class.decolorado]="pagina.decolorado"
+        [class.invisible]="pagina.invisible"
+        [style.z-index]="pagina.zIndex"
+        (click)="onPaginaClick($index, $event)"
+      >
+        {{ pagina.titulo }}
+        @if (pagina.mostrarBoton) {
+          <button
+            class="abrirLibro"
+            [class.desaparece]="!mostrarBotonAbrir"
+            [class.aparece]="mostrarBotonAbrir"
+          >
+            Abrir Libro
+          </button>
+        }
+      </div>
+    }
+  </div>
+</div>
